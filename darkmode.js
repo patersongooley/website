@@ -3,35 +3,28 @@
 
 function initDarkMode() {
     const html = document.documentElement;
-    const darkModePreference = localStorage.getItem('darkMode');
-
-    // Default to dark mode if no preference is set
-    const isLightMode = darkModePreference === 'disabled';
-
-    if (isLightMode) {
-        html.setAttribute('data-theme', 'light');
-        updateToggleButton(false);
-    } else {
-        // Default is dark mode (no data-theme attribute needed)
+    const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
+    
+    if (isDarkMode) {
+        html.setAttribute('data-theme', 'dark');
         updateToggleButton(true);
+    } else {
+        updateToggleButton(false);
     }
 }
 
 function toggleDarkMode() {
     const html = document.documentElement;
-    const darkModePreference = localStorage.getItem('darkMode');
-
-    // Default to dark mode if no preference is set
-    const isLightMode = darkModePreference === 'disabled';
-
-    if (isLightMode) {
+    const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
+    
+    if (isDarkMode) {
         html.removeAttribute('data-theme');
-        localStorage.removeItem('darkMode'); // Reset to default (dark)
-        updateToggleButton(true);
-    } else {
-        html.setAttribute('data-theme', 'light');
         localStorage.setItem('darkMode', 'disabled');
         updateToggleButton(false);
+    } else {
+        html.setAttribute('data-theme', 'dark');
+        localStorage.setItem('darkMode', 'enabled');
+        updateToggleButton(true);
     }
 }
 
