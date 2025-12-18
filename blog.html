@@ -9,20 +9,42 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
     <style>
+        /* Dark Mode Variables */
+        :root {
+            --bg-color: #f9f9f9;
+            --text-color: #333;
+            --header-color: #2c3e50;
+            --card-bg: #ecf0f1;
+            --card-border: #bdc3c7;
+            --button-color: #2980b9;
+            --footer-text: #7f8c8d;
+        }
+
+        html[data-theme="dark"] {
+            --bg-color: #1e1e1e;
+            --text-color: #e0e0e0;
+            --header-color: #bb86fc;
+            --card-bg: #2d2d2d;
+            --card-border: #444;
+            --button-color: #7ec8ff;
+            --footer-text: #a0a0a0;
+        }
+
         /* Shared base to match index.html */
         * { margin:0; padding:0; box-sizing:border-box; }
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f9f9f9;
-            color:#333;
+            background-color: var(--bg-color);
+            color: var(--text-color);
             max-width:1200px;
             margin:0 auto;
             padding:20px;
             line-height:1.6;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
         header { text-align:center; margin-bottom:30px; }
-        h1 { color:#2c3e50; font-size:2.2rem; }
-        p.lead { color:#7f8c8d; margin-top:8px; }
+        h1 { color:var(--header-color); font-size:2.2rem; }
+        p.lead { color:var(--footer-text); margin-top:8px; }
 
         /* Library grid */
         .library {
@@ -34,8 +56,8 @@
 
         .card-link { text-decoration:none; color:inherit; }
         .card {
-            background:#ecf0f1;
-            border:1px solid #bdc3c7;
+            background: var(--card-bg);
+            border:1px solid var(--card-border);
             border-radius:8px;
             overflow:hidden;
             display:flex;
@@ -65,12 +87,12 @@
         }
 
         .card h3 {
-            color:#2c3e50;
+            color: var(--header-color);
             font-size:1.1rem;
             margin:0;
         }
         .card .subtitle {
-            color:#566574;
+            color: var(--text-color);
             font-size:0.95rem;
         }
         .meta {
@@ -79,12 +101,12 @@
             justify-content:space-between;
             align-items:center;
             font-size:0.85rem;
-            color:#7f8c8d;
+            color: var(--footer-text);
         }
 
         /* small helpers */
-        .back { display:inline-block; margin-top:18px; color:#2980b9; text-decoration:none; }
-        footer { text-align:center; margin-top:34px; color:#7f8c8d; font-size:0.95rem; }
+        .back { display:inline-block; margin-top:18px; color:var(--button-color); text-decoration:none; }
+        footer { text-align:center; margin-top:34px; color:var(--footer-text); font-size:0.95rem; }
     </style>
 </head>
 <body>
