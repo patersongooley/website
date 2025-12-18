@@ -12,18 +12,6 @@
     <style>
         /* Dark Mode Variables */
         :root {
-            --bg-color: #f9f9f9;
-            --text-color: #333;
-            --card-bg: #ecf0f1;
-            --card-border: #bdc3c7;
-            --header-color: #2c3e50;
-            --footer-bg: #2c3e50;
-            --footer-text: #ecf0f1;
-            --link-color: #2980b9;
-            --link-hover: #3498db;
-        }
-
-        html[data-theme="dark"] {
             --bg-color: #1e1e1e;
             --text-color: #e0e0e0;
             --card-bg: #2d2d2d;
@@ -33,6 +21,19 @@
             --footer-text: #e0e0e0;
             --link-color: #7ec8ff;
             --link-hover: #a8d8ff;
+            --box-text: #000000;
+        }
+
+        html[data-theme="light"] {
+            --bg-color: #f9f9f9;
+            --text-color: #333;
+            --card-bg: #ecf0f1;
+            --card-border: #bdc3c7;
+            --header-color: #2c3e50;
+            --footer-bg: #2c3e50;
+            --footer-text: #ecf0f1;
+            --link-color: #2980b9;
+            --link-hover: #3498db;
         }
 
         /* General Reset */
@@ -116,7 +117,7 @@
         section {
             margin-bottom: 50px;
         }
-
+        
         /* Blog Links Styles */
         #blog ul {
             list-style-type: none;
@@ -177,6 +178,7 @@
         #memories ul {
             list-style-type: none;
             padding-left: 0;
+            color: var(--box-text);
         }
 
         #memories li {
@@ -214,7 +216,7 @@
     <header>
         <h1 class="animate__animated animate__tada">Paterson Gooley</h1>
         <p> Programmer | Game Dev | Musician </p>
-        <button id="darkModeToggle" onclick="toggleDarkMode()">🌙 Dark</button>
+        <button id="darkModeToggle" onclick="toggleDarkMode()">☀️ Light</button>
     </header>
 
     <!-- About Me Section -->
