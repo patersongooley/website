@@ -3,11 +3,16 @@
 
 function initDarkMode() {
     const html = document.documentElement;
-    const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
-    
+    const darkModePreference = localStorage.getItem('darkMode');
+
+    // Default to dark mode if no preference is set
+    const isDarkMode = darkModePreference !== 'disabled';
+
     if (isDarkMode) {
         html.setAttribute('data-theme', 'dark');
         updateToggleButton(true);
+    } else {
+        updateToggleButton(false);
     }
 }
 
