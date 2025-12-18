@@ -26,12 +26,17 @@ function toggleDarkMode() {
 
     if (isLightMode) {
         html.removeAttribute('data-theme');
-        localStorage.setItem('darkMode', null); // Reset to default (dark)
+        localStorage.removeItem('darkMode'); // Reset to default (dark)
         updateToggleButton(true);
     } else {
         html.setAttribute('data-theme', 'light');
         localStorage.setItem('darkMode', 'disabled');
         updateToggleButton(false);
+    }
+}
+
+function updateToggleButton(isDarkMode) {
+    const button = document.getElementById('darkModeToggle');
     if (button) {
         button.textContent = isDarkMode ? '☀️ Light' : '🌙 Dark';
     }
