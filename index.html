@@ -3,8 +3,10 @@
 <head>
     <link
     rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" href="pfp_christmas.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,6 +25,7 @@
             --link-color: #2980b9;
             --link-hover: #3498db;
             --box-text: #000000;
+            --text-font: 'Arial', sans-serif;
         }
 
         html[data-theme="dark"] {
@@ -35,6 +38,7 @@
             --footer-text: #e0e0e0;
             --link-color: #00bc5d;
             --link-hover: #a8d8ff;
+            --text-font: "Source Code Pro", monospace;
         }
 
         /* General Reset */
@@ -91,6 +95,7 @@
             flex-direction: column;
             align-items: center;
             gap: 5px;
+            font-family: var(--text-font);
         }
 
         header p {
