@@ -120,6 +120,12 @@
             color: var(--footer-text);
         }
 
+        h2.subheading {
+            font-size:1.8rem;
+            color:var(--header-color);
+            margin-top:10px;
+            text-align: center;
+        }
         /* small helpers */
         .back { display:inline-block; margin-top:18px; color:var(--button-color); text-decoration:none; }
         footer { text-align:center; margin-top:34px; color:var(--footer-text); font-size:0.95rem; }
@@ -128,21 +134,21 @@
 <body>
     <header>
         <h1 class="animate__animated animate__tada">Blog Library</h1>
-        <p class="lead">Discover posts — click any card to open the full article.</p>
+        <p class="lead">See all my projects below!</p>
         <button id="darkModeToggle" onclick="toggleDarkMode()">🌙 Dark</button>
     </header>
-
+    <h2 class="subheading animate__animated animate__slideInLeft">Current Projects</h2>
     <main>
-        <section class="library" aria-label="Blog library">
+        <section class="library animate__animated animate__zoomIn" aria-label="Blog library">
             <!-- Card 1 -->
             <a class="card-link" href="WIP.html">
                 <article class="card" role="article">
                     <img class="media" src="NO IMAGE AVALIABLE.png" alt="Unknown Abyss cover image" />
                     <div class="body">
-                        <h3>Unknown Abyss (VR Horror) WORK IN PROGRESS BLOG</h3>
+                        <h3>Unknown Abyss (VR Horror)</h3>
                         <div class="subtitle">Dev notes & post-mortem on the VR game development.</div>
                         <div class="meta">
-                            <span>DATE NOT FOUND</span>
+                            <span>Latest episode:</span>
                             <span>read →</span>
                         </div>
                     </div>
@@ -157,7 +163,7 @@
                         <h3>Mr. Cupcake Animatronic</h3>
                         <div class="subtitle">Update 1 for my journey to make the Mr. cupcake animatronic.</div>
                         <div class="meta">
-                            <span>DATE NOT FOUND</span>
+                            <span>Latest episode:</span>
                             <span>read →</span>
                         </div>
                     </div>
