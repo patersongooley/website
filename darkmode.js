@@ -3,13 +3,18 @@
 
 function initDarkMode() {
     const html = document.documentElement;
-    const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
+    const stored = localStorage.getItem('darkMode');
     
-    if (isDarkMode) {
+    if (stored === 'enabled') {
         html.setAttribute('data-theme', 'dark');
         updateToggleButton(true);
-    } else {
+    } else if (stored === 'disabled') {
         updateToggleButton(false);
+    } else {
+        // Default to dark mode
+        html.setAttribute('data-theme', 'dark');
+        localStorage.setItem('darkMode', 'enabled');
+        updateToggleButton(true);
     }
 }
 
