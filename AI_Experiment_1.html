@@ -167,20 +167,25 @@
             color: var(--text-color);
             transition: color 0.3s ease;
         }
+
+        .darkModeFontChange {
+         font-family: var(--text-font);
+        }
+
     </style>
 </head>
 <body>
 
     <!-- Header Section -->
     <header>
-        <h1>AI Experiments</h1>
-        <p>Tic Tac Toe</p>
+        <h1 class="darkModeFontChange">AI Experiments</h1>
+        <p class="darkModeFontChange">Tic Tac Toe</p>
         <button id="darkModeToggle" onclick="toggleDarkMode()">🌙 Dark</button>
     </header>
 
     <!-- Blog Article -->
     <article>
-        <h2>Testing to see if AI can program the game, Tic Tac Toe</h2>
+        <h2 class="darkModeFontChange">Testing to see if AI can program the game, Tic Tac Toe</h2>
         <p>Published on: December 13, 2024</p>
         <p>
             In this experiment, I see if ChatGPT can program the famous household board-game, Tic Tac Toe.

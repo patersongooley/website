@@ -129,6 +129,11 @@
             margin-top:10px;
             text-align: center;
         }
+
+        .darkModeFontChange {
+         font-family: var(--text-font);
+        }
+
         /* small helpers */
         .back { display:inline-block; margin-top:18px; color:var(--button-color); text-decoration:none; }
         footer { text-align:center; margin-top:34px; color:var(--footer-text); font-size:0.95rem; }
@@ -136,20 +141,20 @@
 </head>
 <body>
     <header>
-        <h1 class="animate__animated animate__tada">Blog Library</h1>
+        <h1 class="animate__animated animate__tada darkModeFontChange">Blog Library</h1>
         <p class="lead">See all my projects below!</p>
         <button id="darkModeToggle" onclick="toggleDarkMode()">🌙 Dark</button>
     </header>
-    <h2 class="subheading animate__animated animate__slideInLeft">Current Projects</h2>
+    <h2 class="subheading animate__animated animate__slideInLeft darkModeFontChange">Current Projects</h2>
     <main>
-        <section class="library animate__animated animate__zoomIn" aria-label="Blog library">
+        <section class="library animate__animated animate__zoomIn darkModeFontChange" aria-label="Blog library">
             <!-- Card 1 -->
             <a class="card-link" href="WIP.html">
                 <article class="card" role="article">
                     <img class="media" src="NO IMAGE AVALIABLE.png" alt="Unknown Abyss cover image" />
                     <div class="body">
-                        <h3>Unknown Abyss (VR Horror)</h3>
-                        <div class="subtitle">Dev notes & post-mortem on the VR game development.</div>
+                        <h3 class="darkModeFontChange">Unknown Abyss (VR Horror)</h3>
+                        <div class="subtitle darkModeFontChange">Dev notes & post-mortem on the VR game development.</div>
                         <div class="meta">
                             <span>Latest episode:</span>
                             <span>read →</span>
@@ -163,8 +168,8 @@
                 <article class="card">
                     <img class="media" src="NO IMAGE AVALIABLE.png" alt="Mr. Cupcake animatronic" />
                     <div class="body">
-                        <h3>Mr. Cupcake Animatronic</h3>
-                        <div class="subtitle">Update 1 for my journey to make the Mr. cupcake animatronic.</div>
+                        <h3 class="darkModeFontChange">Mr. Cupcake Animatronic</h3>
+                        <div class="subtitle darkModeFontChange">Update 1 for my journey to make the Mr. cupcake animatronic.</div>
                         <div class="meta">
                             <span>Latest episode:</span>
                             <span>read →</span>

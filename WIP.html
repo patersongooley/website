@@ -134,20 +134,29 @@
         footer p {
             font-size: 1rem;
         }
+
+        .darkModeFontChange {
+         font-family: var(--text-font);
+        }
+
+        .bigger {
+         font-size: 2rem;
+        }
+
     </style>
 </head>
 <body>
 
     <!-- Header Section -->
     <header>
-        <h1>You caught me!</h1>
+        <h1 class="darkModeFontChange">You caught me!</h1>
         <button id="darkModeToggle" onclick="toggleDarkMode()">🌙 Dark</button>
     </header>
 
     <!-- Main Content -->
     <main>
-        <h2>Page not Ready</h2>
-        <p>
+        <h2 class="darkModeFontChange">Page not Ready</h2>
+        <p class="darkModeFontChange bigger">
             Unfortunetly this page is not ready for the outside world.
         </p>
         <a href="index.html" class="button">Home</a>

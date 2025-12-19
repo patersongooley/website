@@ -167,20 +167,25 @@
             color: var(--text-color);
             transition: color 0.3s ease;
         }
+
+        .darkModeFontChange {
+         font-family: var(--text-font);
+        }
+
     </style>
 </head>
 <body>
 
     <!-- Header Section -->
     <header>
-        <h1>AI Experiments</h1>
-        <p>Rock Paper Scissors</p>
+        <h1 class="darkModeFontChange">AI Experiments</h1>
+        <p class="darkModeFontChange">Rock Paper Scissors</p>
         <button id="darkModeToggle" onclick="toggleDarkMode()">🌙 Dark</button>
     </header>
 
     <!-- Blog Article -->
     <article>
-        <h2>Testing to see if AI can program the game, Rock Paper Scissors</h2>
+        <h2 class="darkModeFontChange">Testing to see if AI can program the game, Rock Paper Scissors</h2>
         <p>Published on: December 13, 2024</p>
         <p>
             In this experiment, I see if ChatGPT can program the famous game, Rock Paper Scissors.
