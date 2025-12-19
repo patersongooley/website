@@ -123,6 +123,11 @@
             transition: background-color 0.3s ease;
         }
 
+        .backButtonClass {
+            padding: 20px 40px;
+            font-size: 2.2rem;
+        }
+
         .button:hover {
             background-color: var(--button-hover);
         }
@@ -164,7 +169,7 @@
         <p class="darkModeFontChange bigger">
             Unfortunetly this page is not ready for the outside world.
         </p>
-        <a href="index.html" class="button">Home</a>
+        <a href="index.html" class="button backButtonClass" id="backButton">Go back.</a>
         <br>
         <br>
         <br>
@@ -180,3 +185,6 @@
 </body>
 </html>
 <script src="darkmode.js"></script>
+<script>
+  document.getElementById("backButton").addEventListener("click", function() {window.history.back();});
+</script>
